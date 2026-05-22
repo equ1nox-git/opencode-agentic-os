@@ -1,0 +1,29 @@
+{
+  "machine": "lenovo-ideapad-320",
+  "os": "linux",
+  "cpu": "AMD A12-9720P",
+  "ram_gb": 8,
+  "gpu": "AMD Radeon R7 integrated",
+  "local_model": {
+    "enabled": false,
+    "reason": "Insufficient RAM - 7B model needs ~6GB free, leaving only 2GB for OS",
+    "note": "Cloud-only operation. No local Ollama."
+  },
+  "cloud_models": {
+    "enabled": true,
+    "providers": ["opencode", "groq", "openrouter", "cloudflare"]
+  },
+  "routing": {
+    "simple_queries": "regex_bypass",
+    "medium_queries": "cloud_fast",
+    "complex_queries": "cloud_primary",
+    "fallback": "cloud_secondary"
+  },
+  "performance": {
+    "math_fast_timeout_ms": 100,
+    "local_model_timeout_ms": 999999,
+    "cloud_primary_timeout_ms": 8000,
+    "cloud_fallback_timeout_ms": 15000
+  },
+  "notes": "8GB RAM - cloud only. Use fastest cloud models for everything except regex-bypass queries."
+}

@@ -1,0 +1,39 @@
+========================================
+OPENCODE AGENTIC EDUCATION OS
+========================================
+
+PLUG IN THIS USB AND FOLLOW THE GUIDE FOR YOUR SYSTEM:
+
+WINDOWS 11 (Tower):
+  1. Open the opencode-agentic-os folder
+  2. Double-click: install-windows.bat
+  3. Wait for "Installation Complete"
+  4. Open PowerShell, type: opencode
+
+UBUNTU/LINUX (Ideapad):
+  1. Open terminal
+  2. cd to the USB (usually /media/$USER/sandisk/opencode-agentic-os)
+  3. Run: bash ai/install.sh
+  4. Wait for "Installation Complete"
+  5. Type: opencode
+
+MACBOOK:
+  Already installed. Run: opencode
+
+========================================
+WHAT'S INCLUDED:
+- 35 specialist agents (education, engineering, sales, marketing, etc.)
+- Instant math calculator (no LLM call)
+- Quality-ranked model fallback
+- Per-device optimization profiles
+
+TEST IT:
+  sqrt 196              -> instant: 14
+  cbrt -125             -> instant: -5
+  convert 5 miles to km -> instant: 8.04672
+  explain derivative    -> college math tutor
+  python for loop       -> coding tutor
+
+NEED HELP?
+  See README-Windows.txt or README-Ubuntu.txt in the ai/ folder
+========================================

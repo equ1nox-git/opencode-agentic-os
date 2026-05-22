@@ -1,0 +1,56 @@
+{
+  "enabled": true,
+  "description": "Quality-ranked model fallback with task-aware routing and parallel execution support",
+  "strategies": {
+    "coding": {
+      "description": "Software engineering tasks - maximize SWE-Bench performance",
+      "primary": "opencode/minimax-m2.5-free",
+      "parallel": ["opencode/glm-5-free", "opencode/kimi-k2.5-free"],
+      "fallback": ["groq/qwen3-coder-480b", "openrouter/qwen/qwq-32b"],
+      "emergency": ["groq/llama-3.3-70b-versatile"]
+    },
+    "reasoning": {
+      "description": "Logic, analysis, step-by-step reasoning",
+      "primary": "opencode/glm-5-free",
+      "parallel": ["opencode/minimax-m2.5-free", "opencode/kimi-k2.5-free"],
+      "fallback": ["openrouter/qwen/qwq-32b"],
+      "emergency": ["groq/llama-3.3-70b-versatile"]
+    },
+    "tutoring": {
+      "description": "Education, explanations, teaching",
+      "primary": "opencode/kimi-k2.5-free",
+      "parallel": ["opencode/glm-5-free", "opencode/minimax-m2.5-free"],
+      "fallback": ["openrouter/qwen/qwq-32b"],
+      "emergency": ["groq/llama-3.3-70b-versatile"]
+    },
+    "fast": {
+      "description": "Quick tasks where speed matters more than quality",
+      "primary": "groq/qwen3-coder-480b",
+      "parallel": ["cerebras/qwen3-coder-470b"],
+      "fallback": ["opencode/glm-4.7-free"],
+      "emergency": ["groq/llama-3.3-70b-versatile"]
+    }
+  },
+  "local": {
+    "macbook": {
+      "enabled": true,
+      "model": "ollama/qwen2.5-coder:14b",
+      "use_for": ["medium_complexity", "coding", "tutoring"]
+    },
+    "desktop": {
+      "enabled": true,
+      "model": "ollama/qwen2.5-coder:7b",
+      "use_for": ["medium_complexity", "coding"]
+    },
+    "lenovo": {
+      "enabled": false,
+      "reason": "Insufficient RAM (8GB)"
+    }
+  },
+  "cooldownMs": 30000,
+  "fallbackMode": "race",
+  "raceTimeoutMs": 8000,
+  "sequentialTimeoutMs": 15000,
+  "maxRetries": 3,
+  "onFailure": "escalate_to_next_tier"
+}

@@ -1,0 +1,29 @@
+{
+  "machine": "macbook-neo",
+  "os": "macos",
+  "cpu": "Apple M4",
+  "ram_gb": 24,
+  "gpu": "Apple Silicon integrated",
+  "local_model": {
+    "enabled": true,
+    "ollama_model": "qwen2.5-coder:14b",
+    "estimated_vram_gb": 10,
+    "use_for": ["medium_complexity", "coding", "tutoring"]
+  },
+  "cloud_models": {
+    "enabled": true,
+    "providers": ["opencode", "groq", "openrouter", "cloudflare"]
+  },
+  "routing": {
+    "simple_queries": "regex_bypass",
+    "medium_queries": "local_ollama",
+    "complex_queries": "cloud_primary",
+    "fallback": "cloud_secondary"
+  },
+  "performance": {
+    "math_fast_timeout_ms": 100,
+    "local_model_timeout_ms": 5000,
+    "cloud_primary_timeout_ms": 8000,
+    "cloud_fallback_timeout_ms": 15000
+  }
+}

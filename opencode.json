@@ -1,0 +1,252 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "plan",
+  "agent": {
+    "plan": {
+      "description": "Planning agent - orchestrates and delegates to specialists",
+      "mode": "primary",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "build": {
+      "description": "Build agent - writes code and delegates to specialists",
+      "mode": "primary",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "education-router": {
+      "description": "Detects subject and level, routes to appropriate tutor",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "math-fast": {
+      "description": "Zero-LLM calculator and unit converter",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "math-tutor-k12": {
+      "description": "K-12 math specialist (arithmetic, algebra, geometry)",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "math-tutor-college": {
+      "description": "College math specialist (calculus, linear algebra, proofs)",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "science-tutor": {
+      "description": "Physics, chemistry, biology tutor",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "coding-tutor": {
+      "description": "Programming education specialist",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "test-prep-sat": {
+      "description": "SAT/ACT test prep strategies",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "answer-reviewer": {
+      "description": "Quality gate for all tutor responses",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "frontend-developer": {
+      "description": "Expert frontend developer specializing in modern web technologies, React/Vue/Angular frameworks, UI implementation, and performance optimization",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "backend-architect": {
+      "description": "Senior backend architect specializing in scalable system design, database architecture, API development, and cloud infrastructure",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "senior-developer": {
+      "description": "Premium implementation specialist - Masters Laravel/Livewire/FluxUI, advanced CSS, Three.js integration",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "code-reviewer": {
+      "description": "Expert code reviewer who provides constructive, actionable feedback focused on correctness, maintainability, security, and performance",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "devops-automator": {
+      "description": "Expert DevOps engineer specializing in infrastructure automation, CI/CD pipeline development, and cloud operations",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "security-engineer": {
+      "description": "Expert application security engineer specializing in threat modeling, vulnerability assessment, secure code review, security architecture design, and incident response",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "ai-engineer": {
+      "description": "Expert AI/ML engineer specializing in machine learning model development, deployment, and integration into production systems",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "database-optimizer": {
+      "description": "Expert database specialist focusing on schema design, query optimization, indexing strategies, and performance tuning for PostgreSQL, MySQL, and modern databases",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "sales-coach": {
+      "description": "Expert sales coaching specialist focused on rep development, pipeline review facilitation, call coaching, deal strategy, and forecast accuracy",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "deal-strategist": {
+      "description": "Senior deal strategist specializing in MEDDPICC qualification, competitive positioning, and win planning for complex B2B sales cycles",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "sales-engineer": {
+      "description": "Senior pre-sales engineer specializing in technical discovery, demo engineering, POC scoping, competitive battlecards, and bridging product capabilities to business outcomes",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "account-strategist": {
+      "description": "Expert post-sale account strategist specializing in land-and-expand execution, stakeholder mapping, QBR facilitation, and net revenue retention",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "growth-hacker": {
+      "description": "Expert growth strategist specializing in rapid user acquisition through data-driven experimentation. Develops viral loops, optimizes conversion funnels, and finds scalable growth channels",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "content-creator": {
+      "description": "Expert content strategist and creator for multi-platform campaigns. Develops editorial calendars, creates compelling copy, manages brand storytelling, and optimizes content for engagement",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "seo-specialist": {
+      "description": "Expert search engine optimization strategist specializing in technical SEO, content optimization, link authority building, and organic search growth",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "paid-media-auditor": {
+      "description": "Comprehensive paid media auditor who systematically evaluates Google Ads, Microsoft Ads, and Meta accounts across 200+ checkpoints",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "product-manager": {
+      "description": "Holistic product leader who owns the full product lifecycle — from discovery and strategy through roadmap, stakeholder alignment, go-to-market, and outcome measurement",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "ui-designer": {
+      "description": "Expert UI designer specializing in visual design systems, component libraries, and pixel-perfect interface creation",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "ux-researcher": {
+      "description": "Expert user experience researcher specializing in user behavior analysis, usability testing, and data-driven design insights",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "data-engineer": {
+      "description": "Expert data engineer specializing in building reliable data pipelines, lakehouse architectures, and scalable data infrastructure",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "analytics-reporter": {
+      "description": "Expert data analyst transforming raw data into actionable business insights. Creates dashboards, performs statistical analysis, tracks KPIs, and provides strategic decision support",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "project-shepherd": {
+      "description": "Expert project manager specializing in cross-functional project coordination, timeline management, and stakeholder alignment",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "jira-workflow-steward": {
+      "description": "Expert delivery operations specialist who enforces Jira-linked Git workflows, traceable commits, structured pull requests, and release-safe branch strategy",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "evidence-collector": {
+      "description": "Screenshot-obsessed, fantasy-allergic QA specialist - Default to finding 3-5 issues, requires visual proof for everything",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "reality-checker": {
+      "description": "Stops fantasy approvals, evidence-based certification - Default to NEEDS WORK, requires overwhelming proof for production readiness",
+      "mode": "subagent",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    }
+  },
+  "model": "opencode/minimax-m2.5-free"
+}

@@ -1,0 +1,99 @@
+{
+  "description": "Common exact unit conversions (no approximation)",
+  "length": {
+    "m_to_km": 0.001,
+    "km_to_m": 1000,
+    "cm_to_m": 0.01,
+    "m_to_cm": 100,
+    "mm_to_m": 0.001,
+    "m_to_mm": 1000,
+    "in_to_cm": 2.54,
+    "cm_to_in": 0.393700787,
+    "ft_to_m": 0.3048,
+    "m_to_ft": 3.2808399,
+    "yd_to_m": 0.9144,
+    "m_to_yd": 1.0936133,
+    "mi_to_km": 1.609344,
+    "km_to_mi": 0.621371192,
+    "nmi_to_km": 1.852,
+    "km_to_nmi": 0.539956803
+  },
+  "mass": {
+    "g_to_kg": 0.001,
+    "kg_to_g": 1000,
+    "mg_to_g": 0.001,
+    "g_to_mg": 1000,
+    "lb_to_kg": 0.45359237,
+    "kg_to_lb": 2.20462262,
+    "oz_to_g": 28.3495231,
+    "g_to_oz": 0.03527396,
+    "st_to_kg": 6.35029318,
+    "kg_to_st": 0.157473044
+  },
+  "volume": {
+    "ml_to_l": 0.001,
+    "l_to_ml": 1000,
+    "cm3_to_l": 0.001,
+    "l_to_cm3": 1000,
+    "gal_us_to_l": 3.78541178,
+    "l_to_gal_us": 0.264172052,
+    "gal_uk_to_l": 4.54609,
+    "l_to_gal_uk": 0.219969157,
+    "qt_us_to_l": 0.946352946,
+    "l_to_qt_us": 1.05668821,
+    "pt_us_to_l": 0.473176473,
+    "l_to_pt_us": 2.11337642,
+    "cup_us_to_ml": 236.588237,
+    "ml_to_cup_us": 0.00422675,
+    "floz_us_to_ml": 29.5735296,
+    "ml_to_floz_us": 0.0338140227
+  },
+  "temperature": {
+    "c_to_f_formula": "(C * 9/5) + 32",
+    "f_to_c_formula": "(F - 32) * 5/9",
+    "c_to_k_formula": "C + 273.15",
+    "k_to_c_formula": "K - 273.15",
+    "common": {
+      "0C": "32F",
+      "100C": "212F",
+      "-40C": "-40F",
+      "37C": "98.6F",
+      "0F": "-17.78C",
+      "212F": "100C"
+    }
+  },
+  "time": {
+    "s_to_ms": 1000,
+    "ms_to_s": 0.001,
+    "min_to_s": 60,
+    "s_to_min": 0.016666667,
+    "hr_to_min": 60,
+    "min_to_hr": 0.016666667,
+    "day_to_hr": 24,
+    "hr_to_day": 0.041666667,
+    "wk_to_day": 7,
+    "day_to_wk": 0.142857143,
+    "yr_to_day": 365.25,
+    "day_to_yr": 0.00273791
+  },
+  "data": {
+    "b_to_B": 0.125,
+    "B_to_b": 8,
+    "KB_to_B": 1024,
+    "B_to_KB": 0.0009765625,
+    "MB_to_KB": 1024,
+    "KB_to_MB": 0.0009765625,
+    "GB_to_MB": 1024,
+    "MB_to_GB": 0.0009765625,
+    "TB_to_GB": 1024,
+    "GB_to_TB": 0.0009765625
+  },
+  "speed": {
+    "mps_to_kmph": 3.6,
+    "kmph_to_mps": 0.277777778,
+    "mph_to_kmph": 1.609344,
+    "kmph_to_mph": 0.621371192,
+    "knot_to_kmph": 1.852,
+    "kmph_to_knot": 0.539956803
+  }
+}

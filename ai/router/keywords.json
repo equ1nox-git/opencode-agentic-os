@@ -1,0 +1,126 @@
+{
+  "description": "Regex patterns for instant agent routing (zero LLM call)",
+  "version": "1.0",
+  "patterns": {
+    "math_fast": {
+      "exact_match": [
+        "^\\s*sqrt\\s+\\d+",
+        "^\\s*sq\\s+rt\\s+\\d+",
+        "^\\s*cbrt\\s+-?\\d+",
+        "^\\s*cb\\s+rt\\s+-?\\d+",
+        "^\\s*\\^\\d+",
+        "^\\s*\\(-\\d+\\)\\^\\d+",
+        "^\\s*\\d+\\s*[-+]\\s*\\(-?\\d+\\)",
+        "^\\s*convert\\s+",
+        "^\\s*\\d+\\s*(mi|miles|km|kilometers|m|meters|ft|feet|in|inches|cm|centimeters|yd|yards)\\s+(to|into|->)\\s+(mi|miles|km|kilometers|m|meters|ft|feet|in|inches|cm|centimeters|yd|yards)"
+      ],
+      "keywords": ["sqrt", "cbrt", "square root", "cube root", "convert", "^", "="]
+    },
+    "math_tutor_k12": {
+      "exact_match": [
+        "^\\s*solve\\s+for\\s+",
+        "^\\s*factor\\s+",
+        "^\\s*expand\\s+",
+        "^\\s*simplify\\s+",
+        "^\\s*area\\s+of\\s+",
+        "^\\s*perimeter\\s+of\\s+",
+        "^\\s*volume\\s+of\\s+",
+        "^\\s*find\\s+x",
+        "^\\s*algebra",
+        "^\\s*geometry",
+        "^\\s*arithmetic",
+        "^\\s*fraction"
+      ],
+      "keywords": ["solve", "factor", "expand", "area", "perimeter", "volume", "algebra", "geometry", "fraction", "percent", "ratio", "proportion"]
+    },
+    "math_tutor_college": {
+      "exact_match": [
+        "^\\s*derivative\\s+of",
+        "^\\s*integral\\s+of",
+        "^\\s*limit\\s+as",
+        "^\\s*eigenvalue",
+        "^\\s*eigenvector",
+        "^\\s*matrix",
+        "^\\s*differential\\s+equation",
+        "^\\s*partial\\s+derivative",
+        "^\\s*gradient",
+        "^\\s*curl",
+        "^\\s*divergence",
+        "^\\s*proof",
+        "^\\s*theorem",
+        "^\\s*calculus",
+        "^\\s*linear\\s+algebra",
+        "^\\s*vector"
+      ],
+      "keywords": ["derivative", "integral", "limit", "calculus", "eigenvalue", "eigenvector", "matrix", "differential", "vector", "proof", "theorem", "convergence", "divergence"]
+    },
+    "science_tutor": {
+      "exact_match": [
+        "^\\s*force",
+        "^\\s*velocity",
+        "^\\s*acceleration",
+        "^\\s*momentum",
+        "^\\s*energy",
+        "^\\s*work",
+        "^\\s*power",
+        "^\\s*molecule",
+        "^\\s*atom",
+        "^\\s*cell",
+        "^\\s*mitosis",
+        "^\\s*meiosis",
+        "^\\s*photosynthesis",
+        "^\\s*respiration",
+        "^\\s*reaction",
+        "^\\s*periodic\\s+table",
+        "^\\s*physics",
+        "^\\s*chemistry",
+        "^\\s*biology"
+      ],
+      "keywords": ["physics", "chemistry", "biology", "force", "velocity", "acceleration", "momentum", "energy", "atom", "molecule", "cell", "organism", "evolution", "photosynthesis", "respiration", "periodic", "element", "compound"]
+    },
+    "coding_tutor": {
+      "exact_match": [
+        "^\\s*python",
+        "^\\s*javascript",
+        "^\\s*java",
+        "^\\s*c\\+\\+",
+        "^\\s*for\\s+loop",
+        "^\\s*while\\s+loop",
+        "^\\s*function",
+        "^\\s*recursion",
+        "^\\s*array",
+        "^\\s*list",
+        "^\\s*dictionary",
+        "^\\s*object",
+        "^\\s*class",
+        "^\\s*inheritance",
+        "^\\s*API",
+        "^\\s*database",
+        "^\\s*sql",
+        "^\\s*algorithm",
+        "^\\s*data\\s+structure",
+        "^\\s*programming",
+        "^\\s*code",
+        "^\\s*bug"
+      ],
+      "keywords": ["python", "javascript", "java", "loop", "function", "recursion", "array", "list", "dictionary", "object", "class", "inheritance", "API", "database", "SQL", "algorithm", "programming", "debug"]
+    },
+    "test_prep_sat": {
+      "exact_match": [
+        "^\\s*SAT",
+        "^\\s*ACT",
+        "^\\s*standardized\\s+test",
+        "^\\s*test\\s+prep",
+        "^\\s*exam\\s+strategy",
+        "^\\s*multiple\\s+choice",
+        "^\\s*time\\s+management\\s+test"
+      ],
+      "keywords": ["SAT", "ACT", "test strategy", "exam prep", "standardized test", "multiple choice", "time management"]
+    }
+  },
+  "confidence_weights": {
+    "exact_match": 1.0,
+    "keyword_match": 0.7,
+    "no_match": 0.0
+  }
+}
