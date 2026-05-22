@@ -217,10 +217,24 @@ The install script detects your hardware and applies the right profile automatic
 
 ---
 
+## API keys
+
+The default model chain uses free-tier cloud providers. To use fallback tiers, set keys in your shell or OpenCode config:
+
+| Provider | Used for | Get key |
+|----------|----------|---------|
+| [Groq](https://console.groq.com) | `GROQ_API_KEY` | Qwen3 480B + Llama 70B fallback |
+| [OpenRouter](https://openrouter.ai) | `OPENROUTER_API_KEY` | QwQ-32B fallback |
+| [Cerebras](https://cloud.cerebras.ai) | `CEREBRAS_API_KEY` | Fast-tier parallel |
+
+Free-tier OpenCode models (MiniMax M2.5, GLM 5, Kimi K2.5) work with no API key — just an OpenCode account.
+
+---
+
 ## Requirements
 
 - [OpenCode](https://opencode.ai) installed
-- API keys for your preferred cloud providers (optional — local models work too)
+- API keys for fallback tiers (optional — free OpenCode models work out of the box)
 
 ---
 

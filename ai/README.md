@@ -19,7 +19,7 @@ This system adds 8 education specialist agents to your OpenCode setup:
 
 ## 🚀 Quick Start
 
-### MacBook (this machine)
+### macOS
 ```bash
 bash ~/.config/opencode/ai/install.sh
 ```
